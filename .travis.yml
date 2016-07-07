@@ -17,7 +17,7 @@ addons:
     - tree
 
 before_install:
-  - sudo add-apt-repository ppa:git-core/ppa && sudo apt-get update && sudo apt-get upgrade git
+  - sudo add-apt-repository -y ppa:git-core/ppa && sudo apt-get update && sudo apt-get upgrade git
   - source tools/travis-github-pr-integration.sh
   - tools/travis-install-fish.sh
 
