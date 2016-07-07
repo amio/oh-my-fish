@@ -17,8 +17,7 @@ addons:
     - tree
 
 before_install:
-  - sudo rm /etc/apt/sources.list.d/git-ppa-source.list
-  - sudo apt-get remove git && sudo apt-get remove git-man && sudo apt-get install git-man && sudo apt-get install git
+  - sudo add-apt-repository ppa:git-core/ppa && sudo apt-get update && sudo apt-get upgrade git
   - source tools/travis-github-pr-integration.sh
   - tools/travis-install-fish.sh
 
